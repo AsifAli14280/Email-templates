@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1" /> -->
+  <title>Proforma Invoice</title>
+  <style>
+    /* Developer: asif-reachout on GitHub */
+    /* Mobile-specific adjustments for responsiveness */
+    @media only screen and (max-width: 600px) {
+      .responsive-table {
+        width: 100% !important;
+        display: block;
+      }
+      .two-column {
+        display: block;
+        width: 100% !important;
+        text-align: left !important;
+        padding: 0 !important; /* Remove all padding on smaller screens */
+        margin-bottom: 15px; /* Add space between blocks */
+      }
+      .logo img {
+        max-width: 100% !important;
+        height: auto !important;
+      }
+    }
+  </style>
+</head>
+<body style="font-family: Arial, sans-serif; color: #333; padding: 20px; margin: 0;">
+  <!-- Main container for the email, centers the content and applies a border -->
+  <table width="100%" border="0" cellspacing="0" cellpadding="0" style="width: 100%; max-width: 600px; margin: auto; border: 1px solid #ddd;">
+    
+    <!-- Logo and Title Section -->
+    <tr>
+      <td style="padding: 20px; text-align: left;" class="logo">
+        <!-- Replace `logo-url-here` with actual image URL -->
+        <img src="https://companieslogo.com/img/orig/MTN.JO-d1d53d13.png" alt="MTN Taaply" style="max-width: 150px; height: auto;">
+      </td>
+    </tr>
+    
+    <!-- Invoice Title Section -->
+    <tr>
+      <td style="background-color: #f4f4f4; padding: 20px; text-align: center; font-size: 24px; font-weight: bold; color: #333;">
+        PROFORMA INVOICE
+      </td>
+    </tr>
+    
+    <!-- Left and Right Info Sections -->
+    <tr>
+      <td style="padding: 20px;">
+        <table width="100%" style="font-size: 14px;" class="responsive-table">
+          <tr>
+            <!-- Left Side Information -->
+            <td style="text-align: left; vertical-align: top; padding-right: 10px; width: 50%;" class="two-column">
+              <p style="margin: 0;"><strong>Issue Date:</strong> {DD MM YYYY}</p>
+              <p style="margin: 0;"><strong>Invoice Number:</strong> {YYMMDD-Number}</p>
+              <p style="margin: 0;"><strong>Account Number:</strong> {TAAPLY Account}</p>
+              <p style="margin: 10px 0px 0px 0px"><strong>Product Type:</strong> Digital business card</p>
+              <p style="margin: 0;"><strong>Validity:</strong> 30 days from the date of issue</p>
+            </td>
+            
+            <!-- Right Side Information -->
+            <td style="text-align: right; vertical-align: top; padding-left: 10px; width: 50%;" class="two-column">
+              <p style="margin: 0;"><strong>{Account Name (Customer)}</strong></p>
+              <p style="margin: 0;">Attention: {Name and Surname}</p>
+              <p style="margin: 0;">{Address}</p>
+              <p style="margin: 0;">{Email}</p>
+              <p style="margin: 0;">{Phone}</p>
+              <p style="margin: 10px 0px 0px 0px"><strong>RCCM:</strong> [Enter RCCM]</p>
+              <p style="margin: 0;"><strong>NIU:</strong> [Enter NIU]</p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    
+    <!-- Invoice Table -->
+    <tr>
+      <td style="padding: 20px;">
+        <table width="100%" style="border-collapse: collapse; font-size: 14px;">
+          <tr>
+            <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">No.</th>
+            <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Description</th>
+            <th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Card Type</th>
+            <th style="border: 1px solid #ddd; padding: 8px; text-align: center;">Qty</th>
+            <th style="border: 1px solid #ddd; padding: 8px; text-align: center;">Unit Price</th>
+            <th style="border: 1px solid #ddd; padding: 8px; text-align: center;">Amount</th>
+          </tr>
+          <tr>
+            <td style="border: 1px solid #ddd; padding: 8px; text-align: left;">1</td>
+            <td style="border: 1px solid #ddd; padding: 8px; text-align: left;">{Social or E/S or P}</td>
+            <td style="border: 1px solid #ddd; padding: 8px; text-align: left;">-</td>
+            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">-</td>
+            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">-</td>
+            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">-</td>
+          </tr>
+          <!-- Additional rows as needed -->
+          <tr>
+            <td colspan="5" style="border: 1px solid #ddd; padding: 8px; text-align: right;"><strong>Total EXCL. VAT:</strong></td>
+            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">-</td>
+          </tr>
+          <tr>
+            <td colspan="5" style="border: 1px solid #ddd; padding: 8px; text-align: right;">Special Discount:</td>
+            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">-</td>
+          </tr>
+          <tr>
+            <td colspan="5" style="border: 1px solid #ddd; padding: 8px; text-align: right;">VAT (18%):</td>
+            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">-</td>
+          </tr>
+          <tr>
+            <td colspan="5" style="border: 1px solid #ddd; padding: 8px; text-align: right;">CA (5%):</td>
+            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">-</td>
+          </tr>
+          <tr>
+            <td colspan="5" style="border: 1px solid #ddd; padding: 8px; text-align: right;">Electronic Stamp:</td>
+            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">-</td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <!-- Conditions of Sale Section with Border -->
+    <tr>
+      <td style="padding: 20px;">
+        <!-- Boxed Conditions of Sale section for additional clarity -->
+        <div style="border: 1px solid #ddd; padding: 10px;">
+          <p style="margin: 0; font-size: 14px; text-decoration: underline;"><strong>Conditions of Sale:</strong></p>
+          <p style="margin: 0; font-size: 14px;">Delivery Time: 5-10 working days after receiving the order</p>
+          <p style="margin: 0; font-size: 14px;">Payment Terms: Check, cash, MoMo, or bank transfer payable to MTN CONGO</p>
+        </div>
+      </td>
+    </tr>
+    <!-- Footer Section -->
+    <tr>
+      <td style="padding: 20px; font-size: 12px; color: #777;">
+        MTN CONGO SA Public Limited Company with capital of 11,000,000,000 CFA francs - Trade register no. CG-BZV-RCCM-07-B-283 NIU M2005110000457122 - Tax regime: Real tax residence: UGE/Brazzaville Bank account: CDC: 202022644300025/LCB: 0121090110108
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
